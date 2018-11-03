@@ -1,0 +1,42 @@
+.nav {
+    background: black;
+    height: 60px;
+    display: flex;
+}
+
+.nav-item {
+    height: 60px;
+    display: flex;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.section {
+    display: inline-block;
+    align-self: center;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    background:grey;
+    transition: background .3s;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    align-self: center;
+    min-width: 250px;
+    margin-left: 10px;
+}
+
+.section-list {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
