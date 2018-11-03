@@ -7,6 +7,7 @@ class Navbar extends Component {
       <div className="nav">
         <span className="title">Futbol Argentino</span>
         <div className="section-list">
+          <a href="#" className="nav-item active"><span className="section">Hoy</span></a>
           <a href="#" className="nav-item"><span className="section">Copa Libertadores</span></a>
           <a href="#" className="nav-item"><span className="section">Copa Sudamericana</span></a>
           <a href="#" className="nav-item"><span className="section">Superliga</span></a>

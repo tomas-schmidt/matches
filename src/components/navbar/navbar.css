@@ -13,14 +13,16 @@
 }
 
 .section {
-    display: inline-block;
-    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #efefef;
     padding: 10px;
+    min-width: 80px;
 }
 
-.nav-item:hover {
-    background:grey;
+.nav-item:not(.active):hover {
+    background: grey;
     transition: background .3s;
 }
 
@@ -35,4 +37,12 @@
 
 .section-list {
     display: flex;
+}
+
+.active {
+    background: #efefef;
+}
+
+.active > .section {
+    color: #4d4d4d;
 }
