@@ -5,22 +5,33 @@ class Navbar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      active: 'hoy'
+      active: 0
     }
+    this.categs = [
+      {key: 0, name: 'Hoy'},
+      {key: 1, name: 'Copa Libertadores'},
+      {key: 2, name: 'Copa Sudamericana'},
+      {key: 3, name: 'Superliga'},
+      {key: 4, name: 'Copa Argentina'}
+    ];
   };
   
   select(e){
     this.setState({ active: e.currentTarget.id})
   }
+
   render() {
     return (
       <div className="nav">
         <span className="title">Futbol Argentino</span>
         <div className="section-list">
-          <a href="#" className={`nav-item ${this.state.active === 'hoy' ? 'active' : '' }`} id="hoy" onClick={ e => this.select(e) }><span className="section">Hoy</span></a>
-          <a href="#" className={`nav-item ${this.state.active === 'lib' ? 'active' : '' }`} id="lib" onClick={ e => this.select(e) }><span className="section">Copa Libertadores</span></a>
-          <a href="#" className={`nav-item ${this.state.active === 'sud' ? 'active' : '' }`} id="sud" onClick={ e => this.select(e) }><span className="section">Copa Sudamericana</span></a>          
-          <a href="#" className={`nav-item ${this.state.active === 'arg' ? 'active' : '' }`} id="arg" onClick={ e => this.select(e) }><span className="section">Copa Argentina</span></a>
+          {
+            this.categs.map(el =>
+              <a href="#" className={'nav-item ' + (this.state.active == el.key ? 'active' : '') } id={el.key} key={el.key} onClick={ e => this.select(e) }>
+                <span className="section">{el.name}</span>
+              </a>
+            )
+          }
         </div>
       </div>
     );
