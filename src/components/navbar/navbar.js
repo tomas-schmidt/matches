@@ -18,6 +18,7 @@ class Navbar extends Component {
   
   select(e){
     this.setState({ active: e.currentTarget.id})
+    this.props.onChange(e.currentTarget.id);
   }
 
   render() {
