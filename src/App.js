@@ -18,17 +18,17 @@ class App extends Component {
   };
 
   handleFieldChange(cat) {
-    this.setState({ 
-      currentCategory: cat,
-    });
+    this.setState({ currentCategory: cat });
   }
 
   render() {
-    let currentSection = this.state.currentCategory === 0 ? <Home></Home>
-    : this.state.currentCategory === 1 ? <Libertadores></Libertadores> 
-    : this.state.currentCategory === 2 ? <Sudamericana></Sudamericana> 
-    : this.state.currentCategory === 3 ? <Superliga></Superliga>
-    : this.state.currentCategory === 4 ? <Argentina></Argentina> : ''
+    let currentSection = this.state.currentCategory == 0 ? <Home></Home>
+    : this.state.currentCategory == 1 ? <Libertadores></Libertadores> 
+    : this.state.currentCategory == 2 ? <Sudamericana></Sudamericana> 
+    : this.state.currentCategory == 3 ? <Superliga></Superliga>
+    : this.state.currentCategory == 4 ? <Argentina></Argentina> : '';
+    console.log(this.state.currentCategory);
+    console.log(currentSection);
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
