@@ -9,6 +9,8 @@ class App extends Component {
     super(props);
     this.state = {
       currentCategory: 0,
+      currentCompetition: '',
+      matchesList: []
     };
     this.handleFieldChange = this.handleFieldChange.bind(this);
   };
@@ -18,42 +20,43 @@ class App extends Component {
   }
 
   render() {
-    let text = this.state.currentCategory == 0 ? 'Hoy'
-      : this.state.currentCategory == 1 ? 'Libertadores' 
-      : this.state.currentCategory == 2 ? 'Sudamericana' 
-      : this.state.currentCategory == 3 ? 'Superliga' 
-      : this.state.currentCategory == 4 ? 'Copa Argentina' : '' ;
+    let text = this.state.currentCategory === 0 ? 'Hoy'
+      : this.state.currentCategory === 1 ? 'Libertadores' 
+      : this.state.currentCategory === 2 ? 'Sudamericana' 
+      : this.state.currentCategory === 3 ? 'Superliga' 
+      : this.state.currentCategory === 4 ? 'Copa Argentina' : '' ;
     let matchesTest = [ 
       {
         "id": 0,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../../logo.svg",
-        "visitingTeamLogo": "../../logo.svg",
+        "homeTeamLogo": "../favicon.ico",
+        "visitingTeamLogo": "../favicon.ico",
         "time": "17:30"
       },
       {
         "id": 1,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../../logo.svg",
-        "visitingTeamLogo": "../../logo.svg",
+        "homeTeamLogo": "../favicon.ico",
+        "visitingTeamLogo": "../favicon.ico",
         "time": "17:30"
       },
       {
         "id": 2,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../../logo.svg",
-        "visitingTeamLogo": "../../logo.svg",
-        "time": "17:30"
+        "homeTeamLogo": "../favicon.ico",
+        "visitingTeamLogo": "../favicon.ico",
+        "time": "17:30",
+        "competition": "Superliga"
       }
     ]
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
         {text}
-        { matchesTest.map(match => <Match key={ match.id } match={ match }></Match>) }
+        { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
       </div>
     );
   }
