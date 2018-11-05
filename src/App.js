@@ -23,18 +23,38 @@ class App extends Component {
       : this.state.currentCategory == 2 ? 'Sudamericana' 
       : this.state.currentCategory == 3 ? 'Superliga' 
       : this.state.currentCategory == 4 ? 'Copa Argentina' : '' ;
-    let matchTest = {
-      "homeTeam": "Team1 Team1",
-      "visitingTeam": "Team2 Team2",
-      "homeTeamLogo": "../../logo.svg",
-      "visitingTeamLogo": "../../logo.svg",
-      "time": "17:30"
-    }
+    let matchesTest = [ 
+      {
+        "homeTeam": "Team1 Team1",
+        "visitingTeam": "Team2 Team2",
+        "homeTeamLogo": "../../logo.svg",
+        "visitingTeamLogo": "../../logo.svg",
+        "time": "17:30"
+      },
+      {
+        "homeTeam": "Team1 Team1",
+        "visitingTeam": "Team2 Team2",
+        "homeTeamLogo": "../../logo.svg",
+        "visitingTeamLogo": "../../logo.svg",
+        "time": "17:30"
+      },
+      {
+        "homeTeam": "Team1 Team1",
+        "visitingTeam": "Team2 Team2",
+        "homeTeamLogo": "../../logo.svg",
+        "visitingTeamLogo": "../../logo.svg",
+        "time": "17:30"
+      }
+    ]
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
         {text}
-        <Match match={matchTest}></Match>
+        {
+          matchesTest.map(match =>
+            <Match match={match}></Match>
+          )
+        }
       </div>
     );
   }

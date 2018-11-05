@@ -7,7 +7,7 @@ class Match extends Component {
       <div className="match">
         <span>{ this.props.match.time }</span>
         <span>{ this.props.match.homeTeam }</span>
-        <img src={ this.props.match.homeTeamLogo }/>
+        <img src={  this.props.match.homeTeamLogo }/>
         <span>{ this.props.match.visitingTeam }</span>
         <img src={ this.props.match.visitingTeamLogo }/>
       </div>
