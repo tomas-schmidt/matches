@@ -4,7 +4,7 @@ import './match.css';
 class Match extends Component {
   render() {
     return (
-      <div className="match">
+      <div className="match-container">
         <span>{ this.props.match.time }</span>
         <span>{ this.props.match.homeTeam }</span>
         <img src={  this.props.match.homeTeamLogo }/>

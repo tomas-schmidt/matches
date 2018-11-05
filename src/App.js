@@ -25,6 +25,7 @@ class App extends Component {
       : this.state.currentCategory == 4 ? 'Copa Argentina' : '' ;
     let matchesTest = [ 
       {
+        "id": 0,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
         "homeTeamLogo": "../../logo.svg",
@@ -32,6 +33,7 @@ class App extends Component {
         "time": "17:30"
       },
       {
+        "id": 1,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
         "homeTeamLogo": "../../logo.svg",
@@ -39,6 +41,7 @@ class App extends Component {
         "time": "17:30"
       },
       {
+        "id": 2,
         "homeTeam": "Team1 Team1",
         "visitingTeam": "Team2 Team2",
         "homeTeamLogo": "../../logo.svg",
@@ -50,11 +53,7 @@ class App extends Component {
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
         {text}
-        {
-          matchesTest.map(match =>
-            <Match match={match}></Match>
-          )
-        }
+        { matchesTest.map(match => <Match key={ match.id } match={ match }></Match>) }
       </div>
     );
   }
