@@ -12,3 +12,8 @@
     width: 30px;
     height: 30px;
 }
+
+.container {
+    display: flex;
+    align-items: center; 
+}
