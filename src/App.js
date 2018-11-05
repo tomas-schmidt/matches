@@ -8,14 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentCategory: 0
+      currentCategory: 0,
     };
     this.handleFieldChange = this.handleFieldChange.bind(this);
   };
 
   handleFieldChange(cat) {
     this.setState({ currentCategory: cat });
-    console.log(cat);
   }
 
   render() {
