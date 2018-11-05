@@ -2,7 +2,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/navbar/navbar'
-import Match from './components/match/match';
+import Home from './components/sections/home/home'
+import Libertadores from './components/sections/libertadores/libertadores'
+import Sudamericana from './components/sections/sudamericana/sudamericana'
+import Superliga from './components/sections/superliga/superliga'
+import Argentina from './components/sections/argentina/argentina'
 
 class App extends Component {
   constructor(props) {
@@ -20,43 +24,15 @@ class App extends Component {
   }
 
   render() {
-    let text = this.state.currentCategory === 0 ? 'Hoy'
-      : this.state.currentCategory === 1 ? 'Libertadores' 
-      : this.state.currentCategory === 2 ? 'Sudamericana' 
-      : this.state.currentCategory === 3 ? 'Superliga' 
-      : this.state.currentCategory === 4 ? 'Copa Argentina' : '' ;
-    let matchesTest = [ 
-      {
-        "id": 0,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30"
-      },
-      {
-        "id": 1,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30"
-      },
-      {
-        "id": 2,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30",
-        "competition": "Superliga"
-      }
-    ]
+    let currentSection = this.state.currentCategory === 0 ? <Home></Home>
+      : this.state.currentCategory === 1 ? <Libertadores></Libertadores> 
+      : this.state.currentCategory === 2 ? <Sudamericana></Sudamericana> 
+      : this.state.currentCategory === 3 ? <Superliga></Superliga>
+      : this.state.currentCategory === 4 ? <Argentina></Argentina> : '' ;
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
-        {text}
-        { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
+        { currentSection }
       </div>
     );
   }
