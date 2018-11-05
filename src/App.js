@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/navbar/navbar'
-import Home from './components/home/home'
+import Match from './components/match/match';
 
 class App extends Component {
   constructor(props) {
@@ -23,11 +23,18 @@ class App extends Component {
       : this.state.currentCategory == 2 ? 'Sudamericana' 
       : this.state.currentCategory == 3 ? 'Superliga' 
       : this.state.currentCategory == 4 ? 'Copa Argentina' : '' ;
+    let matchTest = {
+      "homeTeam": "Team1 Team1",
+      "visitingTeam": "Team2 Team2",
+      "homeTeamLogo": "../../logo.svg",
+      "visitingTeamLogo": "../../logo.svg",
+      "time": "17:30"
+    }
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
-        <Home></Home>
         {text}
+        <Match match={matchTest}></Match>
       </div>
     );
   }
