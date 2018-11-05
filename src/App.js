@@ -27,8 +27,6 @@ class App extends Component {
     : this.state.currentCategory == 2 ? <Sudamericana></Sudamericana> 
     : this.state.currentCategory == 3 ? <Superliga></Superliga>
     : this.state.currentCategory == 4 ? <Argentina></Argentina> : '';
-    console.log(this.state.currentCategory);
-    console.log(currentSection);
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>

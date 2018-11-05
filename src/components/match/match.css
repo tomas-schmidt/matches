@@ -1,7 +1,7 @@
 .match-container {
     border: 2px solid black;
     border-radius: 10px;
-    min-width: 350px;
+    min-width: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;

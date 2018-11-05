@@ -12,7 +12,9 @@ class Home extends Component {
         "visitingTeam": "Team2 Team2",
         "homeTeamLogo": "../favicon.ico",
         "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30"
+        "time": "17:30",
+        "day": "Hoy",
+        "instance": "8vos"
       },
       {
         "id": 1,
@@ -20,7 +22,9 @@ class Home extends Component {
         "visitingTeam": "Team2 Team2",
         "homeTeamLogo": "../favicon.ico",
         "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30"
+        "time": "17:30",
+        "day": "17/05",
+        "instance": "8vos"
       },
       {
         "id": 2,
@@ -29,6 +33,8 @@ class Home extends Component {
         "homeTeamLogo": "../favicon.ico",
         "visitingTeamLogo": "../favicon.ico",
         "time": "17:30",
+        "day": "17/05",
+        "instance": "8vos",
         "competition": "Superliga"
       }
     ]
