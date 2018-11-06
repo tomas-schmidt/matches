@@ -4,7 +4,7 @@ import './match.css';
 class Match extends Component {
   render() {
     let competition;
-    if (this.props.competition) competition = <span>{  this.props.competition }</span>
+    if (this.props.match.competition) competition = <span>{  this.props.match.competition }</span>
     return (
       <div className="container">
         <div className="match-container">

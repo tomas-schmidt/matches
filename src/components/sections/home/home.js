@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './home.css'
-import Match from '../../match/match'
+import Matches from '../../matches/matches'
 
 class Home extends Component {
 
@@ -43,9 +43,9 @@ class Home extends Component {
     return (
       <div className="home-container">
         <span>Hoy</span>
-        { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
+        <Matches matches={matchesTest}></Matches>
         <span>Esta semana</span>
-        { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
+        <Matches matches={matchesTest}></Matches>
       </div>
     );
   }

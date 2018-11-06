@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Match from '../../match/match'
 import './libertadores.css'
+import Matches from '../../matches/matches';
 
 class Libertadores extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class Libertadores extends Component {
     this.getMatches();
     return (
       <div>
-        { this.state.matches.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
+        <Matches matches={this.state.matches}></Matches>
       </div>
     );
   }
