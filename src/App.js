@@ -11,9 +11,7 @@ import Argentina from './components/sections/argentina/argentina'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      currentCategory: 0
-    };
+    this.state = { currentCategory: 0 };
     this.handleFieldChange = this.handleFieldChange.bind(this);
   };
 

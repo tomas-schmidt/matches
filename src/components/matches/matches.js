@@ -3,9 +3,6 @@ import Match from './components/match/match'
 import './matches.css';
 
 class Matches extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Match from '../../match/match'
 import './libertadores.css'
 import Matches from '../../matches/matches';
 
