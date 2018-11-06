@@ -14,7 +14,8 @@ class Home extends Component {
         "visitingTeamLogo": "../favicon.ico",
         "time": "17:30",
         "day": "Hoy",
-        "instance": "8vos"
+        "instance": "8vos",
+        "competition": "Libertadores"
       },
       {
         "id": 1,
@@ -24,7 +25,8 @@ class Home extends Component {
         "visitingTeamLogo": "../favicon.ico",
         "time": "17:30",
         "day": "17/05",
-        "instance": "8vos"
+        "instance": "8vos",
+        "competition": "Sudamericana"
       },
       {
         "id": 2,
@@ -40,6 +42,9 @@ class Home extends Component {
     ]
     return (
       <div className="home-container">
+        <span>Hoy</span>
+        { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
+        <span>Esta semana</span>
         { matchesTest.map(match => <Match competition={match.competition} key={ match.id } match={ match }></Match>) }
       </div>
     );
