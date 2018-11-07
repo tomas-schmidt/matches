@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './home.css'
 import Matches from '../../matches/matches'
 import axios from 'axios'
+import environment from '../../../environments/environment';
 
 class Home extends Component {
 
@@ -41,11 +42,7 @@ class Home extends Component {
         "competition": "Superliga"
       }
     ];
-    axios.get('https://www.google.com')
-      .then(res => {
-        console.log(res);
-      }
-    )
+    axios.get(environment.apiBaseUrl).then(res => { console.log(res); })
     return (
       <div className="home-container">
         <span>Hoy</span>
