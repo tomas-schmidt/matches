@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './libertadores.css'
 import Matches from '../../matches/matches';
+import axios from 'axios'
+import environment from '../../../environments/environment';
 
 class Libertadores extends Component {
   constructor(props) {
@@ -41,6 +43,7 @@ class Libertadores extends Component {
         "instance": "8vos"
       }
     ]
+    axios.get(`${environment.apiBaseUrl}/libertadores`).then(res => { console.log(res); })
   }
 
   render() {
