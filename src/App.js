@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar onChange={this.handleFieldChange}></Navbar>
-        { currentSection }
+        <div className="section-container">{currentSection}</div>
       </div>
     );
   }
