@@ -1,54 +1,22 @@
 import React, { Component } from 'react';
 import './home.css'
 import Matches from '../../matches/matches'
-import axios from 'axios'
-import environment from '../../../environments/environment';
+import matchesService from '../../../services/matches-service.js'
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { matches: [] }
+    matchesService.getMatches('').then(res => { this.setState({ matches: res.data }); });
+  }
 
   render() {
-    let matchesTest = [ 
-      {
-        "id": 0,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30",
-        "day": "Hoy",
-        "instance": "8vos",
-        "competition": "Libertadores"
-      },
-      {
-        "id": 1,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30",
-        "day": "17/05",
-        "instance": "8vos",
-        "competition": "Sudamericana"
-      },
-      {
-        "id": 2,
-        "homeTeam": "Team1 Team1",
-        "visitingTeam": "Team2 Team2",
-        "homeTeamLogo": "../favicon.ico",
-        "visitingTeamLogo": "../favicon.ico",
-        "time": "17:30",
-        "day": "17/05",
-        "instance": "8vos",
-        "competition": "Superliga"
-      }
-    ];
-    axios.get(environment.apiBaseUrl).then(res => { console.log(res); })
     return (
       <div className="home-container">
         <span>Hoy</span>
-        <Matches matches={matchesTest}></Matches>
+        <Matches matches={this.state.matches}></Matches>
         <span>Esta semana</span>
-        <Matches matches={matchesTest}></Matches>
+        <Matches matches={this.state.matches}></Matches>
       </div>
     );
   }
