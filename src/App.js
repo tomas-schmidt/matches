@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.currentCategory);
     let currentSection = this.state.currentCategory === '0' ? <Home></Home>
     : this.state.currentCategory === '1' ? <Libertadores></Libertadores> 
     : this.state.currentCategory === '2' ? <Sudamericana></Sudamericana> 
