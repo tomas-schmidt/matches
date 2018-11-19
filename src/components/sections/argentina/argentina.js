@@ -13,6 +13,7 @@ class Argentina extends Component {
   render() {
     return (
       <div>
+        <span className="argentina-title">Copa Argentina</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

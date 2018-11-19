@@ -13,9 +13,9 @@ class Home extends Component {
   render() {
     return (
       <div className="home-container">
-        <span>Hoy</span>
+        <span className="home-title">Hoy</span>
         <Matches matches={this.state.matches}></Matches>
-        <span>Esta semana</span>
+        <span className="home-subtitle">Esta semana</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

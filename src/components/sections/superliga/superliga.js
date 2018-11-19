@@ -13,6 +13,7 @@ class Superliga extends Component {
   render() {
     return (
       <div>
+        <span className="superliga-title">Superliga</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

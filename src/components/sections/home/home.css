@@ -1,3 +1,11 @@
-.home-container {
+.home-title {
+    font-size: 30px;
+    font-style: italic;
+    color: grey;
+}
 
+.home-subtitle {
+    font-size: 20px;
+    font-style: italic;
+    color: grey;
 }

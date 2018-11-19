@@ -13,6 +13,7 @@ class Sudamericana extends Component {
   render() {
     return (
       <div>
+        <span className="inter-title">Copa Sudamericana</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

@@ -13,6 +13,7 @@ class Libertadores extends Component {
   render() {
     return (
       <div>
+        <span className="inter-title">Copa Libertadores</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );
