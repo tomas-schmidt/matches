@@ -2,9 +2,9 @@ import axios from 'axios'
 import environment from '../environments/environment';
 
 const matchesService = {
-  getMatches: comp => { return axios.get(`${environment.apiBaseUrl}/${comp}`) },
+  getMatches: comp => { return axios.get(`${environment.apiBaseUrl}/matches/${comp}`) },
   getCompetitions: () => { return axios.get(`${environment.apiBaseUrl}/competitions`) },
-  getPositions: comp => { return axios.get(`${environment.apiBaseUrl}/positions/:${comp}`) },
+  getPositions: comp => { return axios.get(`${environment.apiBaseUrl}/positions/${comp}`) },
 }
 
 export default matchesService;
