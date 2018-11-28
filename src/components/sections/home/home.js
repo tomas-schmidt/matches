@@ -7,7 +7,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [] }
-    matchesService.getMatches('').then(res => { this.setState({ matches: res.data }); });
+    matchesService.goHome().then(res => { this.setState({ matches: res.data }); });
   }
 
   render() {
