@@ -3,9 +3,9 @@ import environment from '../environments/environment';
 
 const matchesService = {
   goHome: () => { return axios.get(`${environment.apiBaseUrl}`) },
-  getMatches: codeComp => { return axios.get(`${environment.apiBaseUrl}/matches/${codeComp}`) },
+  getMatches: idComp => { return axios.get(`${environment.apiBaseUrl}/matches/${idComp}`) },
   getCompetitions: () => { return axios.get(`${environment.apiBaseUrl}/competitions`) },
-  getPositions: codeComp => { return axios.get(`${environment.apiBaseUrl}/positions/${codeComp}`) },
+  getPositions: idComp => { return axios.get(`${environment.apiBaseUrl}/positions/${idComp}`) },
 }
 
 export default matchesService;
