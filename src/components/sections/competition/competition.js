@@ -7,22 +7,15 @@ class Competition extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [] }
+    this.mounted = true;
   }
 
-  //TODO
-  // mounted = false;
-  
-  // componentDidMount(){
-  //   this.mounted = true;
-  //   matchesService.getMatches(this.props.id).then(res => {  if(this.mounted)this.setState({ matches: res.data }); });
-  // }
-
-  // componentWillUnmount(){
-  //   this.mounted = false;
-  // }
+  componentWillUnmount(){ this.mounted = false; }
 
   render() {
-    matchesService.getMatches(this.props.id).then(res => {  if(this.mounted)this.setState({ matches: res.data }); });
+    matchesService.getMatches(this.props.id).then(res => {
+       if (this.mounted) this.setState({ matches: res.data }); 
+    });
     return (
       <div>
         <span className="title">{this.props.name}</span>
