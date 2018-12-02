@@ -7,15 +7,15 @@ class Competition extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [] }
-    this.mounted = true;
+    matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
   }
 
-  componentWillUnmount(){ this.mounted = false; }
+  componentWillReceiveProps(props) {
+    matchesService.getMatches(props.id).then(res => { this.setState({ matches: res.data }); });
+  }
 
   render() {
-    matchesService.getMatches(this.props.id).then(res => {
-       if (this.mounted) this.setState({ matches: res.data }); 
-    });
+    //TODO: Fix double rendering console.log('rendering');
     return (
       <div>
         <span className="title">{this.props.name}</span>
