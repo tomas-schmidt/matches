@@ -9,9 +9,7 @@ class Competition extends Component {
     this.state = { matches: [] }
     matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
   }
-
-  compType;
-
+  
   componentWillReceiveProps(props) {
     matchesService.getMatches(props.id).then(res => { this.setState({ matches: res.data }); });
   }
