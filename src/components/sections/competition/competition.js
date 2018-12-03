@@ -15,7 +15,7 @@ class Competition extends Component {
   }
 
   render() {
-    //TODO: Fix double rendering console.log('rendering');
+    //TODO: Fix double rendering;
     return (
       <div>
         <span className="title">{this.props.name}</span>

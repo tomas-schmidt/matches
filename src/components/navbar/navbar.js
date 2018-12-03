@@ -7,8 +7,8 @@ class Navbar extends Component {
     this.state = { active: 'Hoy' }
   };
 
-  select(e){
-    this.setState({ active: e.currentTarget.id })
+  select(e) {
+    this.setState({ active: e.currentTarget.id });
     this.props.onChange(e.currentTarget.id);
   }
 
