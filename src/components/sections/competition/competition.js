@@ -10,6 +10,8 @@ class Competition extends Component {
     matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
   }
 
+  compType;
+
   componentWillReceiveProps(props) {
     matchesService.getMatches(props.id).then(res => { this.setState({ matches: res.data }); });
   }
@@ -18,7 +20,7 @@ class Competition extends Component {
     //TODO: Fix double rendering;
     return (
       <div>
-        <span className="title">{this.props.name}</span>
+        <span className={`${this.props.compType}-title`}>{this.props.name}</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

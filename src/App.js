@@ -22,11 +22,13 @@ class App extends Component {
     matchesService.getCompetitions().then(res => { this.setState({ categs: this.state.categs.concat(res.data)}); });
   }
 
-  getId = comp => { return this.state.categs.find(x => x.name === comp).key; }
+  setCompetition() {
+    let comp = this.state.categs.find(x => x.name === this.state.currentCategory);
+    return <Competition name={comp.name} id={comp.key} compType={comp.type}></Competition>
+  }
 
   render() {
-    let currentSection = this.state.currentCategory === 'Hoy' ? <Home id="0"></Home>
-    : <Competition name={this.state.currentCategory} id={this.getId(this.state.currentCategory)}></Competition>
+    let currentSection = this.state.currentCategory === 'Hoy' ? <Home></Home> : this.setCompetition();
     return (
       <div className="App">
         <Navbar categs={this.state.categs} onChange={this.handleFieldChange}></Navbar>
