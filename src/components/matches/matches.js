@@ -6,7 +6,7 @@ class Matches extends Component {
   render() {
     return (
       <div className="matches-container">
-        { this.props.matches.map(match => <Match key={ match.id } match={ match }></Match>) }
+        {this.props.matches.map(match => <Match key={match.id} match={match}></Match>)}
       </div>
     );
   }
