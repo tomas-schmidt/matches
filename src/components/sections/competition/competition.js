@@ -20,7 +20,7 @@ class Competition extends Component {
     //TODO: Fix double rendering;
     return (
       <div>
-        <span className={`${this.props.compType}-title`}>{this.props.name}</span>
+        <span className={`${this.props.comp.type}-title`}>{this.props.comp.name}</span>
         <Matches matches={this.state.matches}></Matches>
       </div>
     );

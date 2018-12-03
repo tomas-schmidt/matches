@@ -24,7 +24,7 @@ class App extends Component {
 
   setCompetition() {
     let comp = this.state.categs.find(x => x.name === this.state.currentCategory);
-    return <Competition name={comp.name} id={comp.key} compType={comp.type}></Competition>
+    return <Competition comp={comp} id={comp.key}></Competition>
   }
 
   render() {
