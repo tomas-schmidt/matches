@@ -8,12 +8,16 @@ class Competition extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [], table: [] }
-    matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
-    matchesService.getTable(this.props.idComp).then(res => { this.setState({ table: res.data }); });
+    this.loadCompetitionData(this.props.id);
   }
 
   componentWillReceiveProps(props) {
-    matchesService.getMatches(props.id).then(res => { this.setState({ matches: res.data }); });
+    this.loadCompetitionData(props.id);
+  }
+
+  loadCompetitionData(idComp) {
+    matchesService.getMatches(idComp).then(res => { this.setState({ matches: res.data }); });
+    matchesService.getTable(idComp).then(res => { this.setState({ table: res.data }); });
   }
 
   render() {
@@ -22,7 +26,7 @@ class Competition extends Component {
       <div>
         <span className={`${this.props.comp.type}-title`}>{this.props.comp.name}</span>
         <Matches matches={this.state.matches}></Matches>
-        <Table idComp={this.state.table}></Table>
+        <Table table={this.state.table}></Table>
       </div>
     );
   }
