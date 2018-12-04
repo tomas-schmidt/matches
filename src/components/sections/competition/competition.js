@@ -7,8 +7,9 @@ import matchesService from '../../../services/matches-service.js'
 class Competition extends Component {
   constructor(props) {
     super(props);
-    this.state = { matches: [] }
+    this.state = { matches: [], table: [] }
     matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
+    matchesService.getTable(this.props.idComp).then(res => { this.setState({ table: res.data }); });
   }
 
   componentWillReceiveProps(props) {
@@ -21,7 +22,7 @@ class Competition extends Component {
       <div>
         <span className={`${this.props.comp.type}-title`}>{this.props.comp.name}</span>
         <Matches matches={this.state.matches}></Matches>
-        <Table idComp={this.props.comp.key}></Table>
+        <Table idComp={this.state.table}></Table>
       </div>
     );
   }
