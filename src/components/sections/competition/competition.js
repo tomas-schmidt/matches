@@ -7,7 +7,7 @@ import matchesService from '../../../services/matches-service.js'
 class Competition extends Component {
   constructor(props) {
     super(props);
-    this.state = { matches: [], table: [] }
+    this.state = { matches: [], table: [] };
   }
 
   componentWillMount() {
@@ -16,8 +16,6 @@ class Competition extends Component {
   }
 
   render() {
-    console.log('render');
-    //TODO: Fix double rendering;
     return (
       <div>
         <span className={`${this.props.comp.type}-title`}>{this.props.comp.name}</span>
