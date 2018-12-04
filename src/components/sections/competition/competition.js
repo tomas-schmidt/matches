@@ -8,19 +8,15 @@ class Competition extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [], table: [] }
-    this.loadCompetitionData(this.props.id);
   }
 
-  componentWillReceiveProps(props) {
-    this.loadCompetitionData(props.id);
-  }
-
-  loadCompetitionData(idComp) {
-    matchesService.getMatches(idComp).then(res => { this.setState({ matches: res.data }); });
-    matchesService.getTable(idComp).then(res => { this.setState({ table: res.data }); });
+  componentWillMount() {
+    matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
+    matchesService.getTable(this.props.id).then(res => { this.setState({ table: res.data }); });
   }
 
   render() {
+    console.log('render');
     //TODO: Fix double rendering;
     return (
       <div>
