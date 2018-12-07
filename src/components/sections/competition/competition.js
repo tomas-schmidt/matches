@@ -11,8 +11,7 @@ class Competition extends Component {
   }
 
   componentWillMount() {
-    matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data }); });
-    matchesService.getTable(this.props.id).then(res => { this.setState({ table: res.data }); });
+    matchesService.competition(this.props.id).then(res => { this.setState({ matches: res.data.matches, table: res.data.table }); });
   }
 
   render() {

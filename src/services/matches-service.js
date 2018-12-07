@@ -6,6 +6,7 @@ const matchesService = {
   getMatches: idComp => { return axios.get(`${environment.apiBaseUrl}/matches/${idComp}`) },
   getCompetitions: () => { return axios.get(`${environment.apiBaseUrl}/competitions`) },
   getTable: idComp => { return axios.get(`${environment.apiBaseUrl}/table/${idComp}`) },
+  getCompetition: idComp => { return axios.get(`${environment.apiBaseUrl}/competition/${idComp}`) }
 }
 
 export default matchesService;
