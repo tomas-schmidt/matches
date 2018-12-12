@@ -1,0 +1,11 @@
+.row-title {
+    background-color: grey;
+}
+
+.row-title * {    
+    font-weight: bold;
+}
+
+.row-basic {
+    background-color: white;;
+}
