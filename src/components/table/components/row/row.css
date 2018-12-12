@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+.row * {
+    margin: 1px;
+}
+
 .row-title {
     background-color: grey;
 }
@@ -19,5 +23,5 @@
 }
 
 .name {
-    width: 120px;
+    width: 140px;
 }
