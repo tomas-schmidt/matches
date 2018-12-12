@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import './table.css';
+import Row from './components/row/row'
 
 class Table extends Component {
   render() {
+    let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Puntos', 'matches_played': 'PJ', 'goals': 'Goles', 'goals_received': 'GEC' };
     return (
       <div className="table-container">
-        {this.props.table.map(team => 
-          <div className="table-position" key={team.id_team}>
-            <span>{team.team_name}</span>
-            <span>{team.points}</span>
-            <span>{team.matches_played}</span>
-            <span>{team.goals}</span>
-            <span>{team.goals_recieved}</span>
-          </div>)}
+        <Row key={0} data={title}></Row>
+        {this.props.table.map(team => <Row key={team.id_team} data={team}></Row>)}
       </div>
     );
   }
