@@ -4,12 +4,16 @@ import './table.css';
 class Table extends Component {
   render() {
     return (
-      <div>
-        <span>{this.props.competition}</span>
-        <div className="table-container">
-          {this.props.table.map(team => <span className="table-position" key={team.id_team}>{team.team_name} {team.points} {team.matches_played} {team.goals} {team.goals_recieved}</span>)}
-        </div>
-      </div> 
+      <div className="table-container">
+        {this.props.table.map(team => 
+          <div className="table-position" key={team.id_team}>
+            <span>{team.team_name}</span>
+            <span>{team.points}</span>
+            <span>{team.matches_played}</span>
+            <span>{team.goals}</span>
+            <span>{team.goals_recieved}</span>
+          </div>)}
+      </div>
     );
   }
 }
