@@ -14,5 +14,10 @@
 
 .row-basic {
     background-color: white;
-    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.name {
+    width: 120px;
 }

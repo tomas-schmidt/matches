@@ -6,7 +6,7 @@ class Row extends Component {
     let rowClass = this.props.data.is_title ? 'row row-title' : 'row row-basic';
     return (
       <div className={rowClass}>
-        <span>{this.props.data.team_name}</span>
+        <span className="name">{this.props.data.team_name}</span>
         <span>{this.props.data.points}</span>
         <span>{this.props.data.matches_played}</span>
         <span>{this.props.data.goals}</span>

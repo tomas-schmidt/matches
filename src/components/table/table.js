@@ -4,7 +4,7 @@ import Row from './components/row/row'
 
 class Table extends Component {
   render() {
-    let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Puntos', 'matches_played': 'PJ', 'goals': 'Goles', 'goals_received': 'GEC' };
+    let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Puntos', 'matches_played': 'PJ', 'goals': 'Goles', 'goals_recieved': 'GEC' };
     return (
       <div className="table-container">
         <Row key={0} data={title}></Row>
