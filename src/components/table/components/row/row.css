@@ -1,11 +1,8 @@
 .row {
-    width: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
-
-.row * {
-    height: 100px;
-}
-
 
 .row-title {
     background-color: grey;
@@ -17,4 +14,5 @@
 
 .row-basic {
     background-color: white;
+    border: 1px solid grey;
 }
