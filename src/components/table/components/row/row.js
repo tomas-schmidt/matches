@@ -3,7 +3,7 @@ import './row.css';
 
 class Row extends Component {
   render() {
-    let rowClass = this.props.data.is_title ? 'row-title' : 'row-basic';
+    let rowClass = this.props.data.is_title ? 'row row-title' : 'row row-basic';
     return (
       <div className={rowClass}>
         <span>{this.props.data.team_name}</span>
