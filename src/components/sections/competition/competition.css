@@ -4,9 +4,13 @@
     color: #007acc;
 }
 
-
 .inter-title {
     font-size: 30px;
     font-style: italic;
     color: #800000;
+}
+
+.competition-container {
+    display: flex;
+    flex-direction: column;
 }
