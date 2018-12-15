@@ -2,6 +2,7 @@
     background-color: #4d4d4d;
     height: 60px;
     display: flex;
+    min-width: 1024px;
 }
 
 .nav-item {
