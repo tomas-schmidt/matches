@@ -17,7 +17,7 @@ class Competition extends Component {
   render() {
     return (
       <div className="competition-container">
-        <span className={`${this.props.comp.type}-title`}>{this.props.comp.name}</span>
+        <span className={`${this.props.comp.type}-title comp-title`}>{this.props.comp.name}</span>
         <div className="competition-info">
           <Matches matches={this.state.matches}></Matches>
           <Table table={this.state.table}></Table>

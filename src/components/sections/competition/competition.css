@@ -1,13 +1,16 @@
 .local-title {
-    font-size: 30px;
-    font-style: italic;
-    color: #007acc;
+    color: #007acc; 
 }
 
 .inter-title {
+    color: #800000;
+}
+
+.comp-title {
+    margin-bottom: 20px;
+    align-self: center;
     font-size: 30px;
     font-style: italic;
-    color: #800000;
 }
 
 .competition-container {
@@ -16,5 +19,6 @@
 }
 
 .competition-info {
-
+    display: flex;
+    justify-content: space-around;
 }
