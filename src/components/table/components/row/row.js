@@ -8,7 +8,7 @@ class Row extends Component {
       <div className={rowClass}>
         <span className="name">{this.props.data.team_name}</span>
         <span>{this.props.data.points}</span>
-        <span className="mp">{this.props.data.matches_played}</span>
+        <span>{this.props.data.matches_played}</span>
         <span>{this.props.data.goals}</span>
         <span>{this.props.data.goals_recieved}</span>
       </div>

@@ -4,7 +4,7 @@ import Row from './components/row/row'
 
 class Table extends Component {
   render() {
-    let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Pts', 'matches_played': 'PJ', 'goals': 'G', 'goals_recieved': 'GE' };
+    let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Pts', 'matches_played': 'PJ', 'goals': 'GF', 'goals_recieved': 'GE' };
     return (
       <div className="table">
         <span className="description">Tabla de posiciones</span>
