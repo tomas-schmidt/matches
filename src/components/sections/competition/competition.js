@@ -3,6 +3,8 @@ import './competition.css'
 import Matches from '../../matches/matches';
 import Table from '../../table/table';
 import matchesService from '../../../services/matches-service.js'
+import Loader from '../../loader/loader';
+
 
 class Competition extends Component {
   constructor(props) {
@@ -11,17 +13,20 @@ class Competition extends Component {
   }
 
   componentWillMount() {
-    matchesService.getCompetition(this.props.id).then(res => { this.setState({ matches: res.data.matches, table: res.data.table }); });
+    matchesService.getCompetition(this.props.id).then(res => { this.setState({ matches: res.data.matches, table: res.data.table, loading: false }); });
   }
 
   render() {
+    let competitionContent = !this.state.loading ? 
+      <div className="competition-info">
+        <Matches matches={this.state.matches}></Matches>
+        <Table table={this.state.table}></Table>
+      </div> 
+      : <Loader></Loader>;
     return (
       <div className="competition-container">
         <span className={`${this.props.comp.type}-title comp-title`}>{this.props.comp.name}</span>
-        <div className="competition-info">
-          <Matches matches={this.state.matches}></Matches>
-          <Table table={this.state.table}></Table>
-        </div>
+        {competitionContent}
       </div>
     );
   }
