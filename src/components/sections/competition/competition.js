@@ -7,7 +7,7 @@ import matchesService from '../../../services/matches-service.js'
 class Competition extends Component {
   constructor(props) {
     super(props);
-    this.state = { matches: [], table: [] };
+    this.state = { matches: [], table: [], loading: true };
   }
 
   componentWillMount() {
