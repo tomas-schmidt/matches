@@ -10,6 +10,8 @@
 
 .row-title {
     background-color: grey;
+    border-radius: 5px;
+    color: #efefef;
 }
 
 .row-title * {    

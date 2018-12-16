@@ -7,7 +7,7 @@ class Table extends Component {
     let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Pts', 'matches_played': 'PJ', 'goals': 'G', 'goals_recieved': 'GE' };
     return (
       <div className="table">
-        <span className="description">Tabla</span>
+        <span className="description">Tabla de posiciones</span>
         <div className="table-container">
           <Row key={0} data={title}></Row>
           {this.props.table.map(team => <Row key={team.id_team} data={team}></Row>)}
