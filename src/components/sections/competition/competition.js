@@ -4,6 +4,7 @@ import Matches from '../../matches/matches';
 import Table from '../../table/table';
 import matchesService from '../../../services/matches-service.js'
 import Loader from '../../loader/loader';
+import Brackets from '../../brackets/brackets';
 
 
 class Competition extends Component {
@@ -21,6 +22,7 @@ class Competition extends Component {
       <div className="competition-info">
         <Matches matches={this.state.matches}></Matches>
         <Table table={this.state.table}></Table>
+        <Brackets></Brackets>
       </div> 
       : <Loader></Loader>;
     return (
