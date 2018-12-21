@@ -25,9 +25,10 @@ class Competition extends Component {
         <Brackets></Brackets>
       </div> 
       : <Loader></Loader>;
+      let type = this.props.comp.isLocal ? 'local' : 'inter';
     return (
       <div className="competition-container">
-        <span className={`${this.props.comp.type}-title comp-title`}>{this.props.comp.name}</span>
+        <span className={`${type}-title comp-title`}>{this.props.comp.name}</span>
         {competitionContent}
       </div>
     );
