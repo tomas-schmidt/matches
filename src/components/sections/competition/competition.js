@@ -8,7 +8,7 @@ import Brackets from '../../brackets/brackets';
 class Competition extends Component {
   render() {
     let type = this.props.comp.isLocal ? 'local' : 'inter';
-    let table = this.props.comp.hasTable ? <Table id={this.props.id}></Table> : null;
+    let table = this.props.comp.hasPositionsTable ? <Table id={this.props.id}></Table> : null;
     let brackets = this.props.comp.hasBrackets ? <Brackets id={this.props.id}></Brackets>: null;
     return (
       <div className="competition-container">
