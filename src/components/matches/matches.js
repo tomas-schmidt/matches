@@ -11,7 +11,8 @@ class Matches extends Component {
   }
 
   componentWillMount() {
-    matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data, loading: false }) });
+    if (this.props.id) matchesService.getMatches(this.props.id).then(res => { this.setState({ matches: res.data, loading: false }) });
+    else matchesService.goHome().then(res => { this.setState({ matches: res.data, loading: false }); });
   }
 
   render() {
