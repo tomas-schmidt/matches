@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './brackets.css'
 import matchesService from '../../services/matches-service.js'
 import Loader from '../loader/loader';
+import Bracket from './components/bracket/bracket'
 
 class Brackets extends Component {
   constructor(props) {
@@ -14,10 +15,12 @@ class Brackets extends Component {
   }
 
   render() {
+    let loader = this.state.loading ? <Loader></Loader> : null;
     return (
       <div className="brackets-container">
-        Brackets
-        <Loader></Loader>
+        {loader}
+        <Bracket bracket={this.state.brackets.one}></Bracket>
+        <Bracket bracket={this.state.brackets.two}></Bracket>
       </div>
     );
   }
