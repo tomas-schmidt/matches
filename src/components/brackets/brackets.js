@@ -3,6 +3,7 @@ import './brackets.css'
 import matchesService from '../../services/matches-service.js'
 import Loader from '../loader/loader';
 import Bracket from './components/bracket/bracket'
+import BracketMatch from './components/bracket-match/bracket-match';
 
 class Brackets extends Component {
   constructor(props) {
@@ -19,8 +20,9 @@ class Brackets extends Component {
     return (
       <div className="brackets-container">
         {loader}
-        <Bracket bracket={this.state.brackets.one}></Bracket>
-        <Bracket bracket={this.state.brackets.two}></Bracket>
+        <Bracket id="1" bracket={this.state.brackets.one}></Bracket>
+        <BracketMatch isFinal="true"></BracketMatch>
+        <Bracket id="2" bracket={this.state.brackets.two}></Bracket>
       </div>
     );
   }
