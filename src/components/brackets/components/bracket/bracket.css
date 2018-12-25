@@ -5,3 +5,7 @@
 .bracket-two {
     
 }
+
+.bracket {
+    display: flex;
+}
