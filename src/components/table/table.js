@@ -11,7 +11,6 @@ class Table extends Component {
   }
 
   componentWillMount() {
-    console.log('mounting');
     matchesService.getTable(this.props.id).then(res => { this.setState({ table: res.data, loading: false }) });
   }
 
