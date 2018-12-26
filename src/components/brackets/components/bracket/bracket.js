@@ -8,7 +8,15 @@ class Bracket extends Component {
     let bracketDisplay = this.props.id === 1? 'bracket-one' : 'bracket-two';
     return (
       <div className={`bracket ${bracketDisplay}`}>
-        {this.props.bracket.map(match => <BracketMatch key={match.instance + match.instanceDetail} match={match}></BracketMatch>)}
+        <div className="eighths">
+          {this.props.bracket.slice(0,4).map(match => <BracketMatch key={match.instance + match.instanceDetail} match={match}></BracketMatch>)}
+        </div>
+        <div className="quarters">
+          {this.props.bracket.slice(4,6).map(match => <BracketMatch key={match.instance + match.instanceDetail} match={match}></BracketMatch>)}
+        </div>
+        <div className="semi">
+          {this.props.bracket.slice(6,7).map(match => <BracketMatch key={match.instance + match.instanceDetail} match={match}></BracketMatch>)}
+        </div>
       </div>
     );
   }
