@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './competition.css'
 import Matches from '../../matches/matches';
-import Table from '../../table/table';
+import PositionsTable from '../../positions-table/positions-table';
 import Brackets from '../../brackets/brackets';
 
 
 class Competition extends Component {
   render() {
     let type = this.props.comp.isLocal ? 'local' : 'inter';
-    let table = this.props.comp.hasPositionsTable ? <Table id={this.props.id}></Table> : null;
+    let table = this.props.comp.hasPositionsTable ? <PositionsTable id={this.props.id}></PositionsTable> : null;
     let brackets = this.props.comp.hasBrackets ? <Brackets id={this.props.id}></Brackets>: null;
     return (
       <div className="competition-container">
