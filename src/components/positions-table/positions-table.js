@@ -14,7 +14,7 @@ class PositionsTable extends Component {
   }
     
   render() {
-    let content = this.state.loading ? <Loader></Loader> : <Table type="positions" table={this.state.table}></Table>;
+    let content = this.state.loading ? <Loader></Loader> : <Table isPositionsTable={true} table={this.state.table}></Table>;
     return (
       <div>
         {content}
