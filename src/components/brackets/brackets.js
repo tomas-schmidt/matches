@@ -17,11 +17,13 @@ class Brackets extends Component {
 
   render() {
     let loader = this.state.loading ? <Loader></Loader> : null;
+    console.log(this.state.brackets.final);
+    let final = (this.state.brackets.final === undefined) ? {} : this.state.brackets.final[0];
     return (
       <div className="brackets-container">
         {loader}
         <Bracket id="1" bracket={this.state.brackets.one}></Bracket>
-        <BracketMatch isFinal="true" match={this.state.brackets.final[0]}></BracketMatch>
+        <BracketMatch isFinal="true" match={final}></BracketMatch>
         <Bracket id="2" bracket={this.state.brackets.two}></Bracket>
       </div>
     );
