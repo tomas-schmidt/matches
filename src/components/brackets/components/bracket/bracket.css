@@ -8,4 +8,12 @@
 
 .bracket {
     display: flex;
+    height: 300px;
+    justify-content: space-around;
+}
+
+.series {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
