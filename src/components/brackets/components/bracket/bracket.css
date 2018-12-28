@@ -1,10 +1,8 @@
-.bracket-one {
-    display: flex;
-    height: 300px;
-    justify-content: space-around;
+.bracket-two {
+    flex-direction: row-reverse;
 }
 
-.bracket-two {
+.bracket {
     display: flex;
     height: 300px;
     justify-content: space-around;

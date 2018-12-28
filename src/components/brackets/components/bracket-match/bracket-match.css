@@ -2,8 +2,14 @@
     display: flex;
     flex-direction: column;
     border: 1px solid white;
+    align-self: center;
 }
 
 .bracket-team {
     background-color:grey;
+}
+
+.bracket-final {
+    font-size: 30px;
+    margin: 5px;
 }
