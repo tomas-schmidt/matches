@@ -21,9 +21,9 @@ class Brackets extends Component {
     return (
       <div className="brackets-container">
         {loader}
-        <Bracket id="1" bracket={this.state.brackets.one}></Bracket>
+        <Bracket id={1} bracket={this.state.brackets.one}></Bracket>
         {final}
-        <Bracket id="2" bracket={this.state.brackets.two}></Bracket>
+        <Bracket id={2} bracket={this.state.brackets.two}></Bracket>
       </div>
     );
   }

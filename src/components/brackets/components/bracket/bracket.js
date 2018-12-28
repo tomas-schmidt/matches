@@ -7,7 +7,7 @@ class Bracket extends Component {
     if (!this.props.bracket) return null;
     let bracketDisplay = this.props.id === 1? 'bracket-one' : 'bracket-two';
     return (
-      <div className={`bracket ${bracketDisplay}`}>
+      <div className={bracketDisplay}>
         <div className="series">
           {this.props.bracket.slice(0,4).map(match => <BracketMatch key={match.instance + match.instanceDetail} match={match}></BracketMatch>)}
         </div>

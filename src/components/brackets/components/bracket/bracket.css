@@ -1,12 +1,10 @@
 .bracket-one {
-
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
 }
 
 .bracket-two {
-    
-}
-
-.bracket {
     display: flex;
     height: 300px;
     justify-content: space-around;
