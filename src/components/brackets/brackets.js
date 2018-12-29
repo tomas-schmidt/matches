@@ -17,7 +17,7 @@ class Brackets extends Component {
 
   render() {
     let loader = this.state.loading ? <Loader></Loader> : null;
-    let final = this.state.loading ? null : <BracketMatch isFinal="true" match={this.state.brackets.final[0]}></BracketMatch>
+    let final = this.state.loading ? null : <BracketMatch isFinal={true} match={this.state.brackets.final[0]}></BracketMatch>
     return (
       <div className="brackets-container">
         {loader}
