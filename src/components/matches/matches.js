@@ -8,6 +8,7 @@ class Matches extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [], loading: true };
+    this.description = 'Partidos';
   }
 
   componentWillMount() {
@@ -16,14 +17,11 @@ class Matches extends Component {
   }
 
   render() {
-    let description = 'No se han encontrado partidos :(';
-    if (!this.state.loading && this.state.matches.length) description = 'Partidos';
-    let header = this.state.loading ?
-      <Loader></Loader> :
-      <span className="description">{description}</span>
+    if (this.state.loading) return <Loader></Loader>;
+    if (this.state.matches.length === 0) this.description = 'No se han encontrado partidos :(';
     return (
       <div className="matches-container">
-        {header}
+        <span className="description">{this.description}</span>
         {this.state.matches.map(match => <Match key={match.id} match={match}></Match>)}
       </div>
     );

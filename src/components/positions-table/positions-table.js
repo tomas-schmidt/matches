@@ -15,10 +15,10 @@ class PositionsTable extends Component {
   }
     
   render() {
-    let content = this.state.loading ? <Loader></Loader> : <Table isPositionsTable={true} table={this.state.table}></Table>;
+    if (this.state.loading) return <Loader></Loader>;
     return (
       <div className="positions-table">
-        {content}
+        <Table isPositionsTable={true} table={this.state.table}></Table>
       </div>
     );
   }

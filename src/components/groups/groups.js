@@ -16,7 +16,7 @@ class Groups extends Component {
 
   render() {
     if (this.state.loading) return <Loader></Loader>;
-    let groups = [];
+    let groups = []
     for (let g in this.state.groups) groups.push(this.state.groups[g]);
     return (
       <div className="groups-container">

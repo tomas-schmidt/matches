@@ -16,13 +16,11 @@ class Brackets extends Component {
   }
 
   render() {
-    let loader = this.state.loading ? <Loader></Loader> : null;
-    let final = this.state.loading ? null : <BracketMatch isFinal={true} match={this.state.brackets.final[0]}></BracketMatch>
+    if (this.state.loading) return <Loader></Loader>;
     return (
       <div className="brackets-container">
-        {loader}
         <Bracket id={1} bracket={this.state.brackets.one}></Bracket>
-        {final}
+        <BracketMatch isFinal={true} match={this.state.brackets.final[0]}></BracketMatch>
         <Bracket id={2} bracket={this.state.brackets.two}></Bracket>
       </div>
     );
