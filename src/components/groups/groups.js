@@ -20,7 +20,7 @@ class Groups extends Component {
     for (let g in this.state.groups) groups.push(this.state.groups[g]);
     return (
       <div className="groups-container">
-        {groups.map(group => <Table key={group[0].team_group} group={group[0].team_group} table={group}></Table>)}
+        {groups.map(group => <Table className="group-container" key={group[0].team_group} group={group[0].team_group} table={group}></Table>)}
       </div>
     );
   }
