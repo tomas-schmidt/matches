@@ -15,6 +15,7 @@ class Table extends Component {
 
   render() {
     if (this.props.isPositionsTable) this.setPositionsTableValues();
+    else this.description += ` ${this.props.group}`;
     let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Pts', 'matches_played': 'PJ', 'goals': 'GF', 'goals_recieved': 'GE' };
     return (
       <div className="table">
