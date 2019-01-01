@@ -16,10 +16,14 @@ class Competition extends Component {
       <div className="competition-container">
         <span className={`${type}-title comp-title`}>{this.props.comp.name}</span>
         <div className="competition-info">
-          <Matches id={this.props.id}></Matches>
-          {table}
-          {brackets}
-          {groups}
+          <div className="section-one">
+            <Matches id={this.props.id}></Matches>
+            {table}
+            {brackets}
+          </div>
+          <div className="section-two">
+            {groups}
+          </div>
         </div>
       </div>
     );
