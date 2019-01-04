@@ -28,14 +28,7 @@ class Competition extends Component {
 
   render() {
     let type = this.props.comp.isLocal ? 'local' : 'inter';
-    if (this.state.loading) {
-      return (
-        <div className="competition-container">
-          <span className={`${type}-title comp-title`}>{this.props.comp.name}</span>
-          <Loader></Loader>
-        </div>
-      )
-    }
+    if (this.state.loading) return <Loader></Loader>
 
     return (
       <div className="competition-container">

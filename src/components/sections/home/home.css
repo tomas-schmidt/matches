@@ -12,5 +12,5 @@
 
 .home-container {
     opacity: 0; 
-    animation: fadeInUp 0.4s ease-in-out 0s forwards;
+    animation: fadeIn 0.4s ease-in-out 0s forwards;
 }
