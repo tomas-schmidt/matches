@@ -1,23 +1,12 @@
 import React, { Component } from 'react';
 import './groups.css';
-import Loader from '../loader/loader';
-import matchesService from '../../services/matches-service.js'
 import Table from '../table/table'
 
 class Groups extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { groups: [], loading: true }
-  }
-
-  componentWillMount() {
-    matchesService.getGroups(this.props.id).then(res => { this.setState({ groups: res.data, loading: false }) });
-  }
 
   render() {
-    if (this.state.loading) return <Loader></Loader>;
     let groups = []
-    for (let g in this.state.groups) groups.push(this.state.groups[g]);
+    for (let g in this.props.groups) groups.push(this.props.groups[g]);
     return (
       <div className="groups-container">
         {groups.map(group =>

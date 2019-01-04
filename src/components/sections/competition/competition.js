@@ -5,34 +5,49 @@ import PositionsTable from '../../positions-table/positions-table';
 import Brackets from '../../brackets/brackets';
 import Groups from '../../groups/groups';
 import matchesService from '../../../services/matches-service.js'
+import Loader from '../../loader/loader';
 
 
 class Competition extends Component {
-  componentWillMount() {
-    const fetchData1 = matchesService.getGroups(this.props.id).then(res => { console.log('fetchdata1') });
-    const fetchData2 = matchesService.getMatches(this.props.id).then(res => { console.log('fetchdata2') });
+  constructor(props) {
+    super(props);
+    this.state = { loading: true }
+    this.table = null;
+    this.brackets = null;
+    this.groups = null;
+    this.matches = null;
+  }
 
-    Promise.all([ fetchData1, fetchData2 ]).then((responses) => {
-      console.log(responses);
-    });
+  componentWillMount() {
+    const p1 = this.props.comp.hasGroups ? matchesService.getGroups(this.props.id).then(res => { this.groups = <Groups groups={res.data}></Groups> }) : null;
+    const p2 = matchesService.getMatches(this.props.id).then(res => { this.matches = <Matches matches={res.data}></Matches> });
+    const p3 = this.props.comp.hasBrackets ? matchesService.getBrackets(this.props.id).then(res => { this.brackets = <Brackets brackets={res.data}></Brackets>  }) : null;
+    const p4 = this.props.comp.hasPositionsTable ? matchesService.getTable(this.props.id).then(res => { this.table = <PositionsTable table={res.data}></PositionsTable> }): null;
+    Promise.all([p1, p2, p3, p4]).then((res) => { this.setState({ loading: false }) });
   }
 
   render() {
     let type = this.props.comp.isLocal ? 'local' : 'inter';
-    let table = this.props.comp.hasPositionsTable ? <PositionsTable id={this.props.id}></PositionsTable> : null;
-    let brackets = this.props.comp.hasBrackets ? <Brackets id={this.props.id}></Brackets>: null;
-    let groups = this.props.comp.hasGroups ? <Groups id={this.props.id}></Groups>: null;
+    if (this.state.loading) {
+      return (
+        <div>
+          <span className={`${type}-title comp-title`}>{this.props.comp.name}</span>
+          <Loader></Loader>
+        </div>
+      )
+    }
+
     return (
       <div className="competition-container">
         <span className={`${type}-title comp-title`}>{this.props.comp.name}</span>
         <div className="competition-info">
           <div className="section-one">
-            <Matches id={this.props.id}></Matches>
-            {table}
-            {brackets}
+            {this.matches}
+            {this.table}
+            {this.brackets}
           </div>
           <div className="section-two">
-            {groups}
+            {this.groups}
           </div>
         </div>
       </div>

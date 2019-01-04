@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './table.css';
 import Row from './components/row/row'
+
 class Table extends Component {
   constructor(props) {
     super(props);
