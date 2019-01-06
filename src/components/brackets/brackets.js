@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './brackets.css'
-
 import Bracket from './components/bracket/bracket'
 import BracketMatch from './components/bracket-match/bracket-match';
 
