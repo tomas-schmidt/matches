@@ -14,19 +14,28 @@
     justify-content: space-around;
 }
 
-/*Mobile*/
-/* .bracket-two {
-    flex-direction: row-reverse;
+.bracket-one {
+    flex-direction: row;
 }
 
-.bracket {
-    display: flex;
-    height: 300px;
-    justify-content: space-around;
-    flex-direction: column;
-}
+@media screen and (max-width: 640px) {
+    .series {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2px;
+    }
+    .bracket {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+    }
 
-.series {
-    display: flex;
-    justify-content: space-around;
-} */
+    .bracket-two {
+        flex-direction: column-reverse;
+    }
+    
+    .bracket-one {
+        flex-direction: column;
+    } 
+} 

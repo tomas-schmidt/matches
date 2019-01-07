@@ -3,9 +3,11 @@
     justify-content: center;
 }
 
-/*Mobile*/
-/* .brackets-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} */
+@media screen and (max-width: 640px) {
+    .brackets-container {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+} 
