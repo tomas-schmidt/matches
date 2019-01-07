@@ -13,3 +13,20 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+/*Mobile*/
+/* .bracket-two {
+    flex-direction: row-reverse;
+}
+
+.bracket {
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.series {
+    display: flex;
+    justify-content: space-around;
+} */
