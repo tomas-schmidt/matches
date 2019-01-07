@@ -26,10 +26,10 @@ class Table extends Component {
     return (
       <div className="table">
         <span className="description">{this.description}</span>
-        <div className="table-container">
+        <table className="table-container" cellspacing="0" cellpadding="0">
           <Row key={0} data={title}></Row>
           {this.props.table.map(team => <Row key={team.id_team} data={team}></Row>)}
-        </div>
+        </table>
       </div>
     );
   }

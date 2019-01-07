@@ -23,3 +23,7 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+table {
+  border: none;
+}
