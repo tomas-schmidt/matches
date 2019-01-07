@@ -7,8 +7,14 @@ class BracketMatch extends Component {
     let matchStyles = this.props.isFinal ? 'bracket-final' : '';
     return (
       <div className={`bracket-match ${matchStyles}`}>
-        <span className="bracket-team">{this.props.match.team1}</span>
-        <span className="bracket-team">{this.props.match.team2}</span>
+        <div className="bracket-team">
+          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../assets/unknown.png")}/>
+          <span>{this.props.match.team1}</span>
+        </div>
+        <div className="bracket-team">
+          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../assets/unknown.png")}/>
+          <span>{this.props.match.team2}</span>
+        </div>
       </div>
     );
   }

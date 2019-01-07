@@ -17,6 +17,8 @@
     font-size: 13px;
     overflow: hidden;
     color: #4d4d4d;
+    display: flex;
+    flex-direction: row;
 }
 
 .bracket-final * {
@@ -26,6 +28,11 @@
 .bracket-final {
     background-color: #b19d09;
     margin: 10px;
+}
+.bracket-team-logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
 }
 
 
