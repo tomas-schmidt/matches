@@ -27,3 +27,18 @@
     background-color: #b19d09;
     margin: 10px;
 }
+
+
+@media screen and (max-width: 350px) {
+    .bracket-match {
+        width: 60px;
+        transform: rotate(90deg)
+    }
+}
+
+@media screen and (max-width: 260px) {
+    .bracket-match {
+        width: 40px;
+        transform: rotate(90deg)
+    }
+}
