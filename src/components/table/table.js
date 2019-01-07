@@ -24,12 +24,14 @@ class Table extends Component {
     else this.setGroupValues();
     let title = { 'is_title': true, 'team_name': 'Equipo', 'points': 'Pts', 'matches_played': 'PJ', 'goals': 'GF', 'goals_recieved': 'GE' };
     return (
-      <div className="table">
+      <div className="main-container">
         <span className="description">{this.description}</span>
-        <table className="table-container" cellspacing="0" cellpadding="0">
-          <Row key={0} data={title}></Row>
-          {this.props.table.map(team => <Row key={team.id_team} data={team}></Row>)}
-        </table>
+        <div className={`table-container ${this.colors}`}>
+          <table className="table" cellSpacing="0" cellPadding="0">
+            <Row key={0} data={title}></Row>
+            {this.props.table.map(team => <Row key={team.id_team} data={team}></Row>)}
+          </table>
+        </div>
       </div>
     );
   }
