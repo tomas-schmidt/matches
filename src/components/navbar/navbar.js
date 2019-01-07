@@ -18,9 +18,9 @@ class Navbar extends Component {
         <span className="title">Futbol Argentino</span>
         <div className="section-list">
           {this.props.categs.map(el =>
-            <a href="#" className={'nav-item ' + (this.state.active === el.name ? 'active' : '') } id={el.name} key={el.key} onClick={ e => this.select(e) }>
+            <button className={'nav-item ' + (this.state.active === el.name ? 'active' : '') } id={el.name} key={el.key} onClick={ e => this.select(e) }>
               <span className="section">{el.name}</span>
-            </a>)}
+            </button>)}
         </div>
       </div>
     );
