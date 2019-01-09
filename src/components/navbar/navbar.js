@@ -20,7 +20,8 @@ class Navbar extends Component {
           {this.props.categs.map(el =>
             <button className={'nav-item ' + (this.state.active === el.name ? 'active' : '') } id={el.name} key={el.key} onClick={ e => this.select(e) }>
               <span className="section">{el.name}</span>
-            </button>)}
+            </button>
+          )}
         </div>
       </div>
     );
