@@ -35,7 +35,7 @@
     margin-right: 1px;
 }
 
-
+/*TODO: Change this re-size*/
 @media screen and (max-width: 350px) {
     .bracket-match {
         width: 60px;
