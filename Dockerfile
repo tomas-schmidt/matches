@@ -1,5 +1,5 @@
-#docker build --tag matchesapp .
-#docker run --name matches-react -p 3000:3000 nodeapp
+#docker build --tag react-app .
+#docker run --name matches-front -p 3000:3000 react-app
 FROM node:10
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
