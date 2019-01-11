@@ -30,8 +30,8 @@ table {
 
 td {
   padding: 1px 0;
-}
 
-td:first-child {
-  padding-left: 4px;
+  &:first-child {
+    padding-left: 4px;
+  }
 }

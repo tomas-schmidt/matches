@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './home.css'
+import './home.scss'
 import Matches from '../../matches/matches'
 import matchesService from '../../../services/matches-service.js'
 import Loader from '../../loader/loader';

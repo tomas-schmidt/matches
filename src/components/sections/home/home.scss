@@ -1,0 +1,16 @@
+.home-title {
+  font-size: 30px;
+  font-style: italic;
+  color: grey;
+}
+
+.home-subtitle {
+  font-size: 25px;
+  font-style: italic;
+  color: grey;
+}
+
+.home-container {
+  opacity: 0; 
+  animation: fadeIn 0.4s ease-in-out 0s forwards;
+}

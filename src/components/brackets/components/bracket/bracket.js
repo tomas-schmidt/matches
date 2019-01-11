@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './bracket.css'
+import './bracket.scss'
 import BracketMatch from '../bracket-match/bracket-match';
 
 class Bracket extends Component {

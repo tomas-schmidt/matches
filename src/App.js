@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Navbar from './components/navbar/navbar'
 import Home from './components/sections/home/home'
 import Competition from './components/sections/competition/competition'

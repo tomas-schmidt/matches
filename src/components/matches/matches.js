@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Match from './components/match/match'
-import './matches.css';
+import './matches.scss';
 
 class Matches extends Component {
 

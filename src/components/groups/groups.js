@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './groups.css';
+import './groups.scss';
 import Table from '../table/table'
 
 class Groups extends Component {

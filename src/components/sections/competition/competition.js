@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './competition.css'
+import './competition.scss'
 import Matches from '../../matches/matches';
 import PositionsTable from '../../positions-table/positions-table';
 import Brackets from '../../brackets/brackets';

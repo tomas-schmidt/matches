@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Table from '../table/table';
-import './positions-table.css'
+import './positions-table.scss'
 
 class PositionsTable extends Component {
     
