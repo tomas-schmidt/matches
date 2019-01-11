@@ -8,11 +8,11 @@ class BracketMatch extends Component {
     return (
       <div className={`bracket-match ${matchStyles}`}>
         <div className="bracket-team">
-          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../assets/unknown.png")}/>
+          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../../assets/unknown.png")}/>
           <span>{this.props.match.team1}</span>
         </div>
         <div className="bracket-team">
-          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../assets/unknown.png")}/>
+          <img className="bracket-team-logo" alt="home-logo" src={require("./../../../../../assets/unknown.png")}/>
           <span>{this.props.match.team2}</span>
         </div>
       </div>

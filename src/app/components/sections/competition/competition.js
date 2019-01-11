@@ -4,7 +4,7 @@ import Matches from '../../matches/matches';
 import PositionsTable from '../../positions-table/positions-table';
 import Brackets from '../../brackets/brackets';
 import Groups from '../../groups/groups';
-import matchesService from '../../../services/matches-service.js'
+import matchesService from '../../../../services/matches-service.js'
 import Loader from '../../loader/loader';
 
 class Competition extends Component {

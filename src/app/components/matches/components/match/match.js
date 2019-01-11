@@ -6,9 +6,9 @@ class Match extends Component {
     let competition;
     if (this.props.match.competition) competition = <span>{  this.props.match.competition }</span>
     let homeLogo, visitingLogo;
-    homeLogo = visitingLogo = require("./../../../../assets/unknown.png");
-    // if (this.props.match.homeLogoTeam === null) homeLogo=require("./../../../../assets/unknown.png")
-    // if (this.props.match.visitingLogoTeam === null) visitingLogo=require("./../../../../assets/unknown.png")
+    homeLogo = visitingLogo = require("./../../../../../assets/unknown.png");
+    // if (this.props.match.homeLogoTeam === null) homeLogo=require("./../../../../../assets/unknown.png")
+    // if (this.props.match.visitingLogoTeam === null) visitingLogo=require("./../../../../../assets/unknown.png")
     return (
       <div className="container">
         <div className="match-container">

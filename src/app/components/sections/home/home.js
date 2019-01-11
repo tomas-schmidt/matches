@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './home.scss'
 import Matches from '../../matches/matches'
-import matchesService from '../../../services/matches-service.js'
+import matchesService from '../../../../services/matches-service.js'
 import Loader from '../../loader/loader';
 
 class Home extends Component {

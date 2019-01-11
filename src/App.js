@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import './App.scss';
-import Navbar from './components/navbar/navbar'
-import Home from './components/sections/home/home'
-import Competition from './components/sections/competition/competition'
+import Navbar from './app/components/navbar/navbar'
+import Home from './app/components/sections/home/home'
+import Competition from './app/components/sections/competition/competition'
 import matchesService from './services/matches-service.js'
 
 class App extends Component {

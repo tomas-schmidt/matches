@@ -4,7 +4,7 @@ import './row.scss';
 class Row extends Component {
   render() {
     let rowClass = this.props.data.is_title ? 'row-title' : 'row-basic';
-    let logo = this.props.data.is_title ? null : <img className="row-team-logo" alt="home-logo" src={require("./../../../../assets/unknown.png")}/>;
+    let logo = this.props.data.is_title ? null : <img className="row-team-logo" alt="home-logo" src={require("./../../../../../assets/unknown.png")}/>;
     return (
       <tbody>
         <tr className={rowClass}>
